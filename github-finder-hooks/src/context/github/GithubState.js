@@ -11,7 +11,7 @@ GET_USER
 }
  from '../type'
 
- const GithubState = (props) => {
+const GithubState = (props) => {
     const initialState = {
         users :[],
         user: {},
@@ -31,9 +31,9 @@ GET_USER
         dispatch({
             type: SEARCH_USERS,
             payload: res.data.items
-        })
+        });
 
-      }
+      };
       
     
     // Get User
@@ -46,17 +46,22 @@ GET_USER
 
       const setLoading = () => dispatch({type: SET_LOADING});
 
-    return <GithubReducer.Provider
-    value={{
-        
-        users:state.users,
-        user:state.user,
-        repos:state.repos,
-        loading:state.loading,
-        searchUsers
-    }}>
-    {props.children}
-</GithubReducer.Provider>
-};
+    
 
-export default GithubContext;
+    return (
+
+        <GithubContext.Provider
+        value={{
+            
+            users:state.users,
+            user:state.user,
+            repos:state.repos,
+            loading:state.loading,
+            searchUsers
+        }}>
+        {props.children}
+        </GithubContext.Provider>
+        )
+ }
+
+export default GithubState;

@@ -5,9 +5,9 @@ import {
     GET_REPOS,
     GET_USER
     }
-     from '../type'
+     from '../type';
 
-     export default (state,action) => {
+export default (state,action) => {
         switch(action.type) {
             case SEARCH_USERS:
                 return{

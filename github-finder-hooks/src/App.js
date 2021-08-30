@@ -19,8 +19,6 @@ const [repos,setRepos] = useState([]);
 const [loading,setLoading] = useState(false);
 const [alert,setAlert] = useState(null);
 
-// Search and get users from github
-
 // Get a single user
 const getUser = async username => {
   setLoading(true);
