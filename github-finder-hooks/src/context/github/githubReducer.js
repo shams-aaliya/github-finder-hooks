@@ -1,6 +1,5 @@
 import {
     SEARCH_USERS,
-    SET_ALERT,
     SET_LOADING,
     GET_REPOS,
     GET_USER,
@@ -8,7 +7,7 @@ import {
     }
      from '../type';
 
-export default (state,action) => {
+export default(state,action) => {
         switch(action.type) {
             case SEARCH_USERS:
                 return{
